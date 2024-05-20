@@ -41,3 +41,35 @@ body{
 .game-board > .snake{
     background: #60cbff;
 }
+.controls{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.controls i{
+    font-size: 1.3rem;
+    color: #b8c6d6;
+    padding: 25px 0;
+    border-right: #212837 3px solid;
+    width: calc(100%/4);
+    cursor: pointer;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .wrapper{
+        width:905vmin;
+        height: 115vmin;
+    }
+    .details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls{
+        display: flex;
+    }
+    .controls i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
