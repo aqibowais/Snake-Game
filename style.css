@@ -58,18 +58,52 @@ body{
 }
 @media screen and (max-width: 800px) {
     .wrapper{
-        width:905vmin;
-        height: 115vmin;
+        width:90vmin;
+        height: 100vmin;
     }
     .details{
         font-size: 1rem;
         padding: 15px 27px;
     }
     .controls{
+        position: relative;
+        width: 100%;
+        display:flex;
+        padding: 8%;   
+        justify-content: center;
+        align-items: center;     
+    }
+    .controls .LR{
+        position: absolute;
         display: flex;
+        flex-direction: row;
+        background-color: #212837;
+        gap: 4.5rem;
+        margin: 10px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        
     }
+    .controls .UD{
+        display: block;
+        flex-direction: row;
+        background-color: #212837;
+        justify-content:space-between;
+        padding: 5px 25px;
+        z-index: 1;
+        border-radius: 10px;
+        
+    }
+    .UD i{
+        display: block;
+        justify-content: space-between;
+        /* gap: 20px; */
+    }
+    
     .controls i{
-        padding: 15px 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+    
+      
+      
 }
