@@ -53,6 +53,7 @@ const initGame = ()=>{
     let htmlMarkup = `<div class = "food" style = "grid-area : ${foodY}/${foodX}"></div>`;
     if(snakeX===foodX && snakeY=== foodY){
         changeFoodPosition();
+        clearInterval(setIntervalId);
         snakeBody.push([foodX,foodY])
         score++;
         HighScore = score >= HighScore ? score : HighScore;
