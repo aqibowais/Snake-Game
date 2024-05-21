@@ -48,15 +48,39 @@ body{
 
 }
 .controls i{
-    font-size: 1.3rem;
     color: #b8c6d6;
-    padding: 25px 0;
-    border-right: #212837 3px solid;
-    width: calc(100%/4);
+    /* padding: 25px 0; */
+ 
     cursor: pointer;
     text-align: center;
 }
 @media screen and (max-width: 800px) {
+    .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .arrow-button {
+        width: 13vmin;
+        height: 12vw;
+        font-size: 24px;
+        margin: 5px;
+        border-radius: 50%;
+        background-color: #212837;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+      
+      /* .arrow-button:hover {
+        background-color: #eee;
+      }
+      
+      .arrow-button:active {
+        background-color: #ccc;
+      } */
     .wrapper{
         width:90vmin;
         height: 100vmin;
@@ -65,7 +89,29 @@ body{
         font-size: 1rem;
         padding: 15px 27px;
     }
-    .controls{
+    .controls .LR{
+        position: absolute;
+        display: flex;
+        background-color: #212837;
+        gap: 4rem;
+        margin: 10px;
+        /* padding: 5px 20px; */
+        border-radius: 10px;
+        
+    }.controls .UD {
+        background-color: #212837;
+        justify-content:space-between;
+        /* display: flex; */
+        display: flex;
+        flex-direction: column;
+        /* padding: 5px 15px; */
+        margin: 10px;
+        gap: 4rem;
+        z-index: 1;
+        border-radius: 10px;
+        
+    }
+    /* .controls{
         position: relative;
         width: 100%;
         display:flex;
@@ -73,37 +119,18 @@ body{
         justify-content: center;
         align-items: center;     
     }
-    .controls .LR{
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        background-color: #212837;
-        gap: 4.5rem;
-        margin: 10px;
-        padding: 5px 20px;
-        border-radius: 10px;
-        
-    }
-    .controls .UD{
-        display: block;
-        flex-direction: row;
-        background-color: #212837;
-        justify-content:space-between;
-        padding: 5px 25px;
-        z-index: 1;
-        border-radius: 10px;
-        
-    }
+   
+    
     .UD i{
         display: block;
         justify-content: space-between;
         /* gap: 20px; */
-    }
+    /* }
     
     .controls i{
-        font-size: 1.2rem;
+        font-size: 2.2rem;
     }
     
-      
+       */ 
       
 }
