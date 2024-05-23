@@ -1,7 +1,7 @@
 const gameBoard = document.querySelector(".game-board");
 const ScoreElement = document.querySelector(".score");
 const HighScoreElement = document.querySelector(".high-score");
-const controls = document.querySelectorAll(".controls i");
+const controls = document.querySelectorAll(".controls button");
 
 let gameOver = false;
 let setIntervalId;
@@ -85,3 +85,4 @@ changeFoodPosition()
 setIntervalId = setInterval(initGame,145)
 
 document.addEventListener('keydown' , changeDirection)
+

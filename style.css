@@ -54,12 +54,40 @@ body{
     cursor: pointer;
     text-align: center;
 }
+.arrow-button {
+    outline: none; /* Remove the focus outline */
+  }
+  
+  .arrow-button:focus {
+    outline: none; /* Remove the focus outline on focus */
+    box-shadow: none; /* Remove any box-shadow on focus */
+  }
+  
+  .arrow-button:active {
+    outline: none; /* Remove the outline on active state */
+    box-shadow: none; /* Remove any box-shadow on active state */
+    background-color: inherit; /* Prevent background color change */
+  }
+  
 @media screen and (max-width: 800px) {
     .controls {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+      }
+     
+      .arrow-button:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      
+      .arrow-button:active {
+        outline: none;
+        box-shadow: none; 
+        /* background-color: black;
+        color: black; */
+        
       }
       
       .arrow-button {
@@ -72,15 +100,10 @@ body{
         border: none;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        outline: none;
       }
       
-      /* .arrow-button:hover {
-        background-color: #eee;
-      }
-      
-      .arrow-button:active {
-        background-color: #ccc;
-      } */
+     
     .wrapper{
         width:90vmin;
         height: 100vmin;
