@@ -40,7 +40,15 @@ body {
 }
 .game-board > .snake {
   background: #60cbff;
+
 }
+.snake-head {
+    
+    border-radius: 35%; 
+}
+
+
+  
 .controls {
   display: none;
   justify-content: space-between;
