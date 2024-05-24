@@ -1,159 +1,114 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e3f2fd;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e3f2fd;
 }
-.wrapper{
-    width: 65vmin;
-    height: 70vmin;
-    background-color: #293447;
-    border-radius: 5px;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  background-color: #293447;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 }
-.details{
-    color: #b8c6d6;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 20px 27px;
-    display: flex;
-    justify-content: space-between;
+.details {
+  color: #b8c6d6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
 }
-.game-board{
-    width: 100%;
-    height: 100%;
-    background: #212837;
-    display: grid;
-    grid-template: repeat(30 , 1fr)/repeat(30 , 1fr);
+.game-board {
+  width: 100%;
+  height: 100%;
+  background: #212837;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
-.game-board > .food{
-    background: #ff083d;
+.game-board > .food {
+  background: #ff083d;
 }
-.game-board > .snake{
-    background: #60cbff;
+.game-board > .snake {
+  background: #60cbff;
 }
-.controls{
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-
+.controls {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
 }
-.controls i{
-    color: #b8c6d6;
-    /* padding: 25px 0; */
- 
-    cursor: pointer;
-    text-align: center;
+.controls i {
+  color: #b8c6d6;
+  cursor: default;
+  text-align: center;
 }
 .arrow-button {
-    outline: none; /* Remove the focus outline */
-  }
-  
-  .arrow-button:focus {
-    outline: none; /* Remove the focus outline on focus */
-    box-shadow: none; /* Remove any box-shadow on focus */
-  }
-  
-  .arrow-button:active {
-    outline: none; /* Remove the outline on active state */
-    box-shadow: none; /* Remove any box-shadow on active state */
-    background-color: inherit; /* Prevent background color change */
-  }
-  
+  outline: none;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 800px) {
-    .controls {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-     
-      .arrow-button:focus {
-        outline: none;
-        box-shadow: none;
-      }
-      
-      .arrow-button:active {
-        outline: none;
-        box-shadow: none; 
-        /* background-color: black;
-        color: black; */
-        
-      }
-      
-      .arrow-button {
-        width: 15vmin;
-        height: 15vw;
-        font-size: 24px;
-        margin: 5px;
-        border-radius: 50%;
-        background-color: #212837;
-        border: none;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        outline: none;
-      }
-      
-     
-    .wrapper{
-        width:90vmin;
-        height: 100vmin;
-    }
-    .details{
-        font-size: 1rem;
-        padding: 15px 27px;
-    }
-    .controls .LR{
-        position: absolute;
-        display: flex;
-        background-color: #212837;
-        gap: 3rem;
-        margin: 10px;
-        /* padding: 5px 20px; */
-        border-radius: 10px;
-        
-    }.controls .UD {
-        background-color: #212837;
-        justify-content:space-between;
-        /* display: flex; */
-        display: flex;
-        flex-direction: column;
-        /* padding: 5px 15px; */
-        margin: 10px;
-        gap: 3rem;
-        z-index: 1;
-        border-radius: 10px;
-        
-    }
-    /* .controls{
-        position: relative;
-        width: 100%;
-        display:flex;
-        padding: 8%;   
-        justify-content: center;
-        align-items: center;     
-    }
-   
-    
-    .UD i{
-        display: block;
-        justify-content: space-between;
-        /* gap: 20px; */
-    /* }
-    
-    .controls i{
-        font-size: 2.2rem;
-    }
-    
-       */ 
-      
+  .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-button {
+    width: 15vmin;
+    height: 15vw;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #212837;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .arrow-button:focus {
+    outline: none;
+    box-shadow: 1px solid #e3f2fd;
+  }
+
+  .arrow-button:active {
+    background-color: #293447;
+
+  }
+  
+  .wrapper {
+    width: 90vmin;
+    height: 100vmin;
+  }
+  .details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls .LR {
+    position: absolute;
+    display: flex;
+    background-color: #212837;
+    gap: 3rem;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .controls .UD {
+    background-color: #212837;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 3rem;
+    z-index: 1;
+    border-radius: 10px;
+  }
 }
